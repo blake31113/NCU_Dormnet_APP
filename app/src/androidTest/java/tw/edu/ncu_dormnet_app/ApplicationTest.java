@@ -1,4 +1,4 @@
-package ncu.nos.ncu_dormnet_app;
+package tw.edu.ncu_dormnet_app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
