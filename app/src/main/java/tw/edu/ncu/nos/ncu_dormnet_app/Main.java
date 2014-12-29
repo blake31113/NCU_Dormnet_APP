@@ -48,15 +48,17 @@ public class Main extends ActionBarActivity
 
         Fragment fragment;
 
-        switch (position) {
+        switch (position)
+        {
+            case 0:
+                fragment=NoteFragment.newInstance();
+                break;
+
             default:
                 fragment = PlaceholderFragment.newInstance(position);
         }
-
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position))
-                .commit();
+        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
     }
 
     public void onSectionAttached(int number) {
